@@ -1,0 +1,11 @@
+<div>
+  @for(game of gameList.getData(); track game) {
+    <game-card 
+      [title]="game.title"
+      [category]="game.category"
+      [minPlayers]="game.minPlayers"
+      [maxPlayers]="game.maxPlayers"
+      [elements]="game.elements"
+    />
+  }
+</div>

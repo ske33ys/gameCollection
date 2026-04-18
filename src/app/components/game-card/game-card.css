@@ -1,0 +1,18 @@
+div {
+  background-color: aliceblue;
+  box-shadow: 3px 3px 3px gray;
+  padding: 10px;
+  width: fit-content;
+  min-width: 250px;
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+p {
+  margin: 3px 0;
+}
+
+h2 {
+  margin: 5px 0;
+  text-align: center;
+}
