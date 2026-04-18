@@ -7,9 +7,9 @@ import { Component, Input, input } from '@angular/core';
   styleUrl: './game-card.css',
 })
 export class GameCard {
-  @Input() title!: string;
-  @Input() category!: string;
-  @Input() minPlayers!: number;
-  @Input() maxPlayers!: number;
-  @Input() elements!: number;
+  title = input();
+  category = input();
+  minPlayers = input();
+  maxPlayers = input();
+  elements = input();
 }

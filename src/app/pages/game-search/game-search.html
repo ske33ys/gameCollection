@@ -1,1 +1,7 @@
-<p>game-search works!</p>
+<header main></header>
+<search-bar 
+  (userInput)="searchGame($event)"
+/>
+<games-list 
+  [gameList]="searchedGames" 
+/>

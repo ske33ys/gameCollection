@@ -1,5 +1,5 @@
 <div>
-  @for(game of gameList.getData(); track game) {
+  @for(game of gameList(); track game) {
     <game-card 
       [title]="game.title"
       [category]="game.category"

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { GamesList } from '../../components/games-list/games-list';
+import { Games } from '../../services/games';
 
 @Component({
   selector: 'app-game-list',
@@ -9,5 +10,5 @@ import { GamesList } from '../../components/games-list/games-list';
   styleUrl: './game-list.css',
 })
 export class GameList {
-
+  gamesList = inject(Games);
 }
