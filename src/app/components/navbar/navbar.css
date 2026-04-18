@@ -1,0 +1,14 @@
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--text);
+}
+
+div {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}

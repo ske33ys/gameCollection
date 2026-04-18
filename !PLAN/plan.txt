@@ -1,0 +1,22 @@
+Strony:
+  Home
+  Lista gier
+  Dodaj grę
+  Edytuj grę
+  Szczegóły gry
+  Statystyki
+
+Możliwości:
+  dodawanie nowych gier
+  usuwanie
+  edycja
+  wyszukiwarka
+  sortowanie
+  filtrowanie po kategorii
+  zapis do localStorage
+  ocena gry 1-10
+  status:
+    posiadam
+    chcę kupić
+    ukończona
+    ulubiona

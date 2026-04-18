@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #e3e7e9;
+  --text: #1b1c1d;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins';
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(assets/Poppins-Regular.ttf);
+}

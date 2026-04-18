@@ -1,0 +1,16 @@
+Etap 2
+  Zrób GameService
+  Tam trzymaj tablicę gier.
+
+Etap 3
+  Dodaj formularz dodawania gry.
+  Reactive forms.
+
+Etap 4
+  Dodaj routing.
+
+Etap 5
+  Dodaj localStorage.
+
+Etap 6
+  Dodaj ładny UI.
