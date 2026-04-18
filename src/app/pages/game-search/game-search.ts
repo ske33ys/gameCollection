@@ -4,10 +4,11 @@ import { Games } from '../../services/games';
 import { Game } from '../../interfaces/game';
 import { SearchBar } from '../../components/search-bar/search-bar';
 import { GamesList } from '../../components/games-list/games-list';
+import { SearchFilter } from '../../components/search-filter/search-filter';
 
 @Component({
   selector: 'app-game-search',
-  imports: [Header, SearchBar, GamesList],
+  imports: [Header, SearchBar, GamesList, SearchFilter],
   templateUrl: './game-search.html',
   styleUrl: './game-search.css',
 })

@@ -8,9 +8,29 @@ body {
   color: var(--text);
   font-family: 'Poppins';
   margin: 0;
+  scrollbar-color: #ebf0f3 rgb(192, 192, 192);
+  scrollbar-width: thin;
 }
 
 @font-face {
   font-family: 'Poppins';
   src: url(assets/Poppins-Regular.ttf);
+}
+
+button {
+  font-size: 14px;
+  font-family: 'Poppins';
+  background-color: aliceblue;
+  border: 1px solid #1b1c1d;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+hr {
+  border: 1px solid rgb(221, 219, 219);
+}
+
+input[type='number'] {
+  font-family: 'Poppins';
+  font-size: 12px;
 }

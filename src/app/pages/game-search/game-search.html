@@ -1,7 +1,11 @@
 <header main></header>
-<search-bar 
-  (userInput)="searchGame($event)"
-/>
-<games-list 
-  [gameList]="searchedGames" 
-/>
+<main>
+  <h2>Search for game</h2>
+  <search-bar 
+    (userInput)="searchGame($event)"
+  />
+  <search-filter></search-filter>
+  <games-list 
+    [gameList]="searchedGames" 
+  />
+</main>

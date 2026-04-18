@@ -1,0 +1,24 @@
+button:hover {
+  cursor: pointer;
+}
+
+#filters {
+  background-color: aliceblue;
+  width: 30%;
+  border: 1px solid rgb(175, 172, 172);
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+  margin: 5px auto;
+}
+
+#filterOptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 1.2em;
+}

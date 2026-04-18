@@ -1,0 +1,17 @@
+<div>
+  <button (click)="displayed == 'none' ? displayed = 'block' : displayed = 'none'">Show filters</button>
+  <section id="filters" [style.display]="displayed">
+    <p>List of Filters</p>
+    <div id="filterOptions">
+      <section id="players">
+        Min players &nbsp;<input type="number" min="0" max="99" value="0" [(ngModel)]="minPlayers"> <br>
+        Max players <input type="number" min="0" max="99" value="0" [(ngModel)]="maxPlayers"> <br>
+      </section>
+      <section id="category">
+        <label for="card">Card games</label>&nbsp;<input type="checkbox" name="card" [(ngModel)]="cardGames" checked> <br>
+        <label for="board">Board games</label><input type="checkbox" name="board" [(ngModel)]="boardGames" checked> <br>
+      </section>
+    </div>
+  </section>
+  <hr>
+</div>
