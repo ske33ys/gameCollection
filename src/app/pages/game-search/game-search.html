@@ -4,7 +4,9 @@
   <search-bar 
     (userInput)="searchGame($event)"
   />
-  <search-filter></search-filter>
+  <search-filter 
+    (filters)="updateFilters($event)"
+  />
   <games-list 
     [gameList]="searchedGames" 
   />

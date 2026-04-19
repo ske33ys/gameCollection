@@ -10,9 +10,11 @@ import { sign } from 'crypto';
 })
 export class SearchFilter {
   minPlayers = signal<number>(0);
-  maxPlayers = signal<number>(0);
+  maxPlayers = signal<number>(99);
   boardGames = signal<boolean>(true);
   cardGames = signal<boolean>(true);
+
+  expandAnimation = false;
 
   filters = output<{
     minPlayers: number,
@@ -21,7 +23,7 @@ export class SearchFilter {
     cardGames: boolean
   }>();
 
-  sendMinPlayers = () => this.filters.emit({
+  emitFilters = () => this.filters.emit({
     minPlayers: this.minPlayers(),
     maxPlayers: this.maxPlayers(),
     boardGames: this.boardGames(),

@@ -1,10 +1,10 @@
 :root {
-  --bg: #ebf0f3;
+  --bg: #fff;
   --text: #1b1c1d;
 }
 
 body {
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: 'Poppins';
   margin: 0;
@@ -14,13 +14,24 @@ body {
 
 @font-face {
   font-family: 'Poppins';
+  font-weight: normal;
   src: url(assets/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: bold;
+  src: url(assets/Poppins-Medium.ttf);
+}
+
+.bold { 
+  font-weight: bold;
 }
 
 button {
   font-size: 14px;
   font-family: 'Poppins';
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   border: 1px solid #1b1c1d;
   padding: 3px;
   border-radius: 10px;
@@ -33,4 +44,14 @@ hr {
 input[type='number'] {
   font-family: 'Poppins';
   font-size: 12px;
+}
+
+main {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(170deg,rgba(255, 255, 255, 1) 0%, rgba(206, 240, 210, 1) 50%, rgba(207, 167, 195, 1) 100%);
+}
+
+h2 {
+  margin: 0;
+  padding: 15px 0;
 }
