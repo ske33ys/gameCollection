@@ -49,6 +49,7 @@ input[type='number'] {
 main {
   min-height: calc(100vh - 80px);
   background: linear-gradient(170deg,rgba(255, 255, 255, 1) 0%, rgba(206, 240, 210, 1) 50%, rgba(207, 167, 195, 1) 100%);
+  
 }
 
 h2 {
