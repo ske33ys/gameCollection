@@ -1,6 +1,8 @@
-<div>
+<div (click)="display == 'none' ? display = 'block' : display = 'none'">
   <h2>{{title()}}</h2>
-  <p>Category: {{category()}}</p>
-  <p>Players: {{minPlayers()}} @if(maxPlayers() > minPlayers()) { - {{maxPlayers()}} }</p>
-  <p>Elements count: {{elements()}}</p>
+  <section id="info" [style.display]="display">
+    <p>Category: {{category()}}</p>
+    <p>Players: {{minPlayers()}} @if(maxPlayers() > minPlayers()) { - {{maxPlayers()}} }</p>
+    <p>Elements count: {{elements()}}</p>
+  </section>
 </div>

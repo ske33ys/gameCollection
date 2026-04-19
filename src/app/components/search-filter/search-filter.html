@@ -1,5 +1,7 @@
 <div>
-  <button (click)="displayed == 'none' ? displayed = 'block' : displayed = 'none'">Show filters</button>
+  <p>
+    <button (click)="displayed == 'none' ? displayed = 'block' : displayed = 'none'">Show filters</button>
+  </p>
   <section id="filters" [style.display]="displayed">
     <p class="bold">List of Filters</p>
     <div id="filterOptions">

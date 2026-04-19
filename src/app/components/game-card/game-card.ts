@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input, input, signal } from '@angular/core';
 
 @Component({
   selector: 'game-card',
@@ -12,4 +12,6 @@ export class GameCard {
   minPlayers = input<number>(0);
   maxPlayers = input<number>(0);
   elements = input<number>(0);
+
+  display = 'none';
 }

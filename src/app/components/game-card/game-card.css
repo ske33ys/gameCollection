@@ -5,7 +5,6 @@ div {
   width: fit-content;
   min-width: 250px;
   max-width: 250px;
-  height: 250px;
   border-radius: 10px;
 }
 
