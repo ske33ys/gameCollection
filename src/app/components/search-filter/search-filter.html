@@ -1,8 +1,8 @@
 <div>
   <p>
-    <button (click)="displayed == 'none' ? displayed = 'block' : displayed = 'none'">Show filters</button>
+    <button (click)="changeDisplay();">{{buttonText()}}</button>
   </p>
-  <section id="filters" [style.display]="displayed">
+  <section id="filters" [style.display]="display">
     <p class="bold">List of Filters</p>
     <div id="filterOptions">
       <section id="players">

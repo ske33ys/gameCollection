@@ -30,5 +30,16 @@ export class SearchFilter {
     cardGames: this.cardGames()
   });
 
-  displayed = 'none';
+  display = 'none';
+  buttonText = signal('Show filters');
+  changeDisplay() {
+    if(this.display == 'none') {
+      this.display = 'block';
+      this.buttonText.set('Hide filters');
+    } else {
+      this.display = 'none';
+      this.buttonText.set('Show filters');
+    }
+    
+  }
 }
