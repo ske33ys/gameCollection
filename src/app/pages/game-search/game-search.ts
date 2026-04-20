@@ -45,8 +45,6 @@ export class GameSearch {
   searchGame(gameName: string) {
     this.userInput = gameName;
     this.searchedGames = [];
-    
-    if(gameName == '') return;
 
     this.allGames.getData().forEach(game => {
       if(game.title.toLowerCase().includes(gameName.toLowerCase())) {
@@ -55,5 +53,7 @@ export class GameSearch {
     });
   }
 
-
+  ngOnInit() {
+    this.searchGame('');
+  }
 }
