@@ -24,16 +24,4 @@
             [maxPlayers]="gameForm.value.maxPlayers || 0"
         />
     </section>
-
-    @if(succeed()) {
-        <pop-up-message 
-            [message]="'Succesfully added a new game!'"
-            [bgColor]="'background-color: #A0DB8A;'"
-        />
-    } @else if(failed()) {
-        <pop-up-message 
-            [message]="'Couldn\'t add the game!'"
-            [bgColor]="'background-color: #D15858;'"
-        />
-    }
 </div>

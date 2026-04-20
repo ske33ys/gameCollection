@@ -24,16 +24,12 @@ export class GameForm {
 
   gameList = inject(Games);
 
-  failed = signal<boolean>(false);
-  succeed = signal<boolean>(false);
   onSubmit() {
     let title = this.gameForm.value.gameName;
     let minPlayers = this.gameForm.value.minPlayers;
     let maxPlayers = this.gameForm.value.maxPlayers;
     let elements = this.gameForm.value.elements;
     
-    this.failed.set(true);
-    this.succeed.set(false);
     
     //validation
     if(title == undefined || minPlayers == undefined || maxPlayers == undefined || elements == undefined) 
@@ -44,9 +40,6 @@ export class GameForm {
 
     if(!isInt(minPlayers) || !isInt(maxPlayers) || !isInt(elements)) 
       return;
-
-    this.failed.set(false);
-    this.succeed.set(true);
     
     let newGameObject: Game = {
       id: 0,
