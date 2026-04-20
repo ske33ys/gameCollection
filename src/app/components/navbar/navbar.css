@@ -12,4 +12,5 @@ div {
   gap: 20px;
   width: 100%;
   justify-content: center;
+  overflow-x: scroll;
 }
