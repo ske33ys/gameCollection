@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { GameList } from './pages/game-list/game-list';
 import { GameSearch } from './pages/game-search/game-search';
+import { AddGame } from './pages/add-game/add-game';
 
 export const routes: Routes = [
   {
@@ -18,5 +19,10 @@ export const routes: Routes = [
     path: 'gameSearch',
     component: GameSearch,
     title: 'Search for Games'
+  },
+  {
+    path: 'gameForm',
+    component: AddGame,
+    title: 'Add a Game'
   }
 ];

@@ -1,0 +1,10 @@
+div {
+    position: absolute;
+    bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #1b1c1d;
+    padding: 3px;
+    border-radius: 15px;
+    width: fit-content;
+    font-size: 15px;
+}

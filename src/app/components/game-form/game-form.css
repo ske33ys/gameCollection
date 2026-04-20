@@ -1,0 +1,10 @@
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#gameTemplate {
+    width: fit-content;
+    margin-inline: auto;
+}

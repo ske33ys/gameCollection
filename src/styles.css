@@ -4,7 +4,7 @@
 }
 
 body {
-  background: var(--bg);
+  background: linear-gradient(170deg,rgba(255, 255, 255, 1) 0%, rgba(206, 240, 210, 1) 50%, rgba(207, 167, 195, 1) 100%);
   color: var(--text);
   font-family: 'Poppins';
   margin: 0;
@@ -29,16 +29,46 @@ body {
 }
 
 button {
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Poppins';
   background-color: rgb(255, 255, 255);
   border: 1px solid #1b1c1d;
-  padding: 3px;
+  padding: 10px;
   border-radius: 10px;
+  size: 44px;
 }
 
 hr {
   border: 1px solid rgb(221, 219, 219);
+}
+
+main {
+  min-height: calc(100vh - 126px);
+}
+
+h2 {
+  margin: 0;
+  padding: 15px 0;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  border: 1px solid #1b1c1d;
+  padding: 20px;
+  border-radius: 10px;
+  margin-inline: auto;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1.1em;
 }
 
 input[type='number'] {
@@ -46,13 +76,16 @@ input[type='number'] {
   font-size: 12px;
 }
 
-main {
-  min-height: calc(100vh - 80px);
-  background: linear-gradient(170deg,rgba(255, 255, 255, 1) 0%, rgba(206, 240, 210, 1) 50%, rgba(207, 167, 195, 1) 100%);
-  
+input[type='text'] {
+  border-radius: 15px;
+  border: 1px solid #1b1c1d;
+  padding: 5px;
 }
 
-h2 {
-  margin: 0;
-  padding: 15px 0;
+@media (min-width: 1024px){
+  main {
+    min-width: 900px;
+    width: 50%;
+    margin-inline: auto;
+  }
 }

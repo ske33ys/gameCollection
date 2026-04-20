@@ -1,0 +1,39 @@
+<div>
+    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+        <label for="name">Game name:</label>
+        <input type="text" formControlName="gameName"> <br>
+        <label for="min">Min players:</label>
+        <input type="number" formControlName="minPlayers"> <br>
+        <label for="max">Max players:</label>
+        <input type="number" formControlName="maxPlayers"> <br>
+        <label for="elements">Elements count:</label>
+        <input type="number" formControlName="elements"> <br>
+        <!-- <label for="name">Game category:</label>
+        <input type="text" formControlName="gameName"> <br> -->
+        <button type="submit">Submit</button>
+    </form> 
+    
+    <h2>Your game:</h2>
+
+    <section id="gameTemplate">
+        <game-card 
+            [title]="gameForm.value.gameName || ''"
+            [category]="'Card Game'"
+            [elements]="gameForm.value.elements || 0"
+            [minPlayers]="gameForm.value.minPlayers || 0"
+            [maxPlayers]="gameForm.value.maxPlayers || 0"
+        />
+    </section>
+
+    @if(succeed()) {
+        <pop-up-message 
+            [message]="'Succesfully added a new game!'"
+            [bgColor]="'background-color: #A0DB8A;'"
+        />
+    } @else if(failed()) {
+        <pop-up-message 
+            [message]="'Couldn\'t add the game!'"
+            [bgColor]="'background-color: #D15858;'"
+        />
+    }
+</div>
