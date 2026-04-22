@@ -15,6 +15,7 @@ import { gameTypeEn } from '../../enums/game-type';
 })
 
 export class GameForm {
+  //typ enum
   gameTypeEn = gameTypeEn;
 
   gameForm = new FormGroup({
