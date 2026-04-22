@@ -1,4 +1,16 @@
 <div>
+    <h4>Your game template:</h4>
+
+    <section id="gameTemplate">
+        <game-card 
+            [title]="gameForm.value.gameName || ''"
+            [category]="gameForm.value.gameType || gameTypeEn.boardGame"
+            [elements]="gameForm.value.elements || 0"
+            [minPlayers]="gameForm.value.minPlayers || 0"
+            [maxPlayers]="gameForm.value.maxPlayers || 0"
+        />
+    </section>
+
     <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
         <label for="name">Game name:</label>
         <input type="text" formControlName="gameName"> <br>
@@ -8,20 +20,9 @@
         <input type="number" formControlName="maxPlayers"> <br>
         <label for="elements">Elements count:</label>
         <input type="number" formControlName="elements"> <br>
-        <!-- <label for="name">Game category:</label>
-        <input type="text" formControlName="gameName"> <br> -->
+        <label for="gameType">Game category:</label>
+        <span>Card game: <input type="radio" name="gameType" formControlName="gameType" value="{{gameTypeEn.cardGame}}"></span>
+        <span>Board game: <input type="radio" name="gameType" formControlName="gameType" value="{{gameTypeEn.boardGame}}"></span>
         <button type="submit">Submit</button>
     </form> 
-    
-    <h2>Your game:</h2>
-
-    <section id="gameTemplate">
-        <game-card 
-            [title]="gameForm.value.gameName || ''"
-            [category]="'Card Game'"
-            [elements]="gameForm.value.elements || 0"
-            [minPlayers]="gameForm.value.minPlayers || 0"
-            [maxPlayers]="gameForm.value.maxPlayers || 0"
-        />
-    </section>
 </div>

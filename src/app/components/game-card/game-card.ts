@@ -1,4 +1,5 @@
 import { Component, Input, input, signal } from '@angular/core';
+import { gameTypeEn } from '../../enums/game-type';
 
 @Component({
   selector: 'game-card',
@@ -8,7 +9,7 @@ import { Component, Input, input, signal } from '@angular/core';
 })
 export class GameCard {
   title = input<string>('');
-  category = input<string>('');
+  category = input<gameTypeEn>(gameTypeEn.cardGame);
   minPlayers = input<number>(0);
   maxPlayers = input<number>(0);
   elements = input<number>(0);

@@ -5,6 +5,7 @@ import { Game } from '../../interfaces/game';
 import { SearchBar } from '../../components/search-bar/search-bar';
 import { GamesList } from '../../components/games-list/games-list';
 import { SearchFilter } from '../../components/search-filter/search-filter';
+import { gameTypeEn } from '../../enums/game-type';
 
 @Component({
   selector: 'app-game-search',
@@ -34,9 +35,9 @@ export class GameSearch {
        game.maxPlayers > this.filters.maxPlayers) 
       return false;
 
-    if((game.category == 'Board Game' && !this.filters.boardGames))
+    if((game.category == gameTypeEn.boardGame && !this.filters.boardGames))
       return false
-    if(game.category == 'Card Game' && !this.filters.cardGames) 
+    if(game.category == gameTypeEn.cardGame && !this.filters.cardGames) 
       return false;
     
     return true;
