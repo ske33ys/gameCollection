@@ -3,6 +3,7 @@ import { Home } from './pages/home/home';
 import { GameList } from './pages/game-list/game-list';
 import { GameSearch } from './pages/game-search/game-search';
 import { AddGame } from './pages/add-game/add-game';
+import path from 'path';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,11 @@ export const routes: Routes = [
   {
     path: 'gameForm',
     component: AddGame,
-    title: 'Add a Game'
+    title: 'Add Game',
+  }, 
+  {
+    path: 'gameForm/update/:id',
+    component: AddGame,
+    title: 'Edit Game'
   }
 ];

@@ -39,4 +39,13 @@ export class Games {
     newGame.id = this.data.length;
     this.data.push(newGame);
   }
+
+  getGameById(id: number) {
+    return this.data.filter(game => game.id == id);
+  }
+
+  updateGameById(updatedGame: Game) {
+    let game = this.data.filter(game => game.id == updatedGame.id)[0];
+    this.data.splice(game.id, 1, updatedGame);
+  }
 }

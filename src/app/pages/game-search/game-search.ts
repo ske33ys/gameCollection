@@ -20,7 +20,7 @@ export class GameSearch {
 
   filters = {
     minPlayers: 0,
-    maxPlayers: 99,
+    maxPlayers: 9999999999999999999,
     boardGames: true,
     cardGames: true
   }

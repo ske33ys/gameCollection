@@ -6,6 +6,7 @@ import { Games } from '../../services/games';
 import { Game } from '../../interfaces/game';
 import { PopUpMessage } from '../pop-up-message/pop-up-message';
 import { gameTypeEn } from '../../enums/game-type';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'game-form',
@@ -15,7 +16,12 @@ import { gameTypeEn } from '../../enums/game-type';
 })
 
 export class GameForm {
-  //typ enum
+  private games = inject(Games);
+  private gamesList = this.games.getData();
+  private route = inject(ActivatedRoute);
+  gameId: string | null = '';
+  editMode = false;
+  private gameToUpdate = this.gamesList[0];
   gameTypeEn = gameTypeEn;
 
   gameForm = new FormGroup({
@@ -25,10 +31,10 @@ export class GameForm {
     elements: new FormControl(0, Validators.required),
     gameType: new FormControl(gameTypeEn.cardGame, Validators.required)
   });
-
-  gameList = inject(Games);
+  
 
   onSubmit() {
+
     if(this.gameForm.valid){
       let title = this.gameForm.value.gameName;
       let minPlayers = this.gameForm.value.minPlayers;
@@ -46,7 +52,7 @@ export class GameForm {
         return;
 
       let newGameObject: Game = {
-        id: 0,
+        id: Number(this.gameId),
         title: title,
         category: gameType,
         elements: elements,
@@ -54,8 +60,26 @@ export class GameForm {
         maxPlayers: maxPlayers
       }
 
-      this.gameList.addGame(newGameObject);
+      if(this.editMode)
+        this.games.updateGameById(newGameObject);
+      else 
+        this.games.addGame(newGameObject);
       this.gameForm.reset();
+    }
+  }
+
+  ngOnInit() {
+    this.gameId = this.route.snapshot.paramMap.get('id');
+    if(this.gameId)
+      this.editMode = true;
+
+    if(this.editMode) {
+      let gameIdNum = Number(this.gameId);
+      let game: Game = this.gamesList.filter(game => game.id == gameIdNum)[0];
+      this.gameForm.patchValue(game);
+      this.gameForm.controls['gameName'].setValue(game.title);
+
+      return;
     }
   }
 }
