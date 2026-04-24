@@ -51,7 +51,7 @@ export class Games {
   }
 
   loadAllData() {
-    this.data.splice(0, this.data.length);
+    this.data.splice(20, this.data.length);
     for(let i = 0; i < localStorage.length; i++) {
       let item = localStorage.getItem(i.toString());
       if(item == null) continue;
