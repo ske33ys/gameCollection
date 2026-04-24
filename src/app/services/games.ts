@@ -38,6 +38,7 @@ export class Games {
   addGame(newGame: Game) {
     newGame.id = this.data.length;
     this.data.push(newGame);
+    localStorage.setItem(newGame.id.toString(), JSON.stringify(newGame));
   }
 
   getGameById(id: number) {
@@ -47,5 +48,15 @@ export class Games {
   updateGameById(updatedGame: Game) {
     let game = this.data.filter(game => game.id == updatedGame.id)[0];
     this.data.splice(game.id, 1, updatedGame);
+  }
+
+  loadAllData() {
+    this.data.splice(0, this.data.length);
+    for(let i = 0; i < localStorage.length; i++) {
+      let item = localStorage.getItem(i.toString());
+      if(item == null) continue;
+      let game: Game = JSON.parse(item);
+      this.data.push(game);
+    }
   }
 }

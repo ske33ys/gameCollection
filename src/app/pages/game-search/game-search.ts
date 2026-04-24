@@ -56,5 +56,6 @@ export class GameSearch {
 
   ngOnInit() {
     this.searchGame('');
+    this.allGames.loadAllData();
   }
 }

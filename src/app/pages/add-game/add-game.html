@@ -4,5 +4,6 @@
     <game-form></game-form>
 
     <h2>..or update a searched game</h2>
+    <div><button (click)="modifyGame()" [class.off]="buttonInActive">Update</button></div>
     <search-bar (userInput)="getGameName($event)" />
 </main>

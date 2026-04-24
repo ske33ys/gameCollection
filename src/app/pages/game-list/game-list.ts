@@ -11,4 +11,8 @@ import { Games } from '../../services/games';
 })
 export class GameList {
   gamesList = inject(Games);
+
+  ngOnInit() {
+    this.gamesList.loadAllData();
+  }
 }
